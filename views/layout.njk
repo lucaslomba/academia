@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        {% block head%}
+            <title>Lucas Lomba</title>
+        {% endblock %}
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="links">
+                <a href="/">Sobre</a>
+                <a href="/portfolio">Aulas</a>
+            </div>
+        </header>
+
+        {% block content %}
+
+        {% endblock%}
+
+        <script src="scripts.js"></script>
+    </body>
+</html>
