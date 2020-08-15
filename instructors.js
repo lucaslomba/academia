@@ -38,6 +38,30 @@ exports.post = function(req, res){
     })
 }
 
+//show
+exports.show = function(req, res){
+    //req.params
+    const { id } = req.params
+
+    const foundInstructor = data.instructors.find(function(instructor){
+        return id == instructor.id
+    })
+
+    if(!foundInstructor){
+        return res.send("Instructor not found!")
+    }
+
+    const instructor = {
+        ...foundInstructor,
+        age: "",
+        gender: "",
+        services: "",
+        created_at: "",
+    }
+
+    return res.render("instructors/show", {instructor})
+}
+
 
 //Update
 
