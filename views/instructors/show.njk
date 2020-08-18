@@ -22,13 +22,13 @@
 
         <div class="item">
             <div>Gender</div>
-            <div>{{ instructor.gender }}</div>
+            <div>{{ "Male" if instructor.gender == "M" else "Female" }}</div>
         </div>
 
         <div class="item">
             <div>Specialties</div>
             <div>
-                {% for service in services %}
+                {% for service in instructor.services %}
                 <span>{{ service }}</span>
                 {% endfor %}
             </div>

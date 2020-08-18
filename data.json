@@ -8,6 +8,15 @@
       "gender": "M",
       "services": "Crossfit",
       "created_at": 1597501307005
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://google.com",
+      "name": "Felipe",
+      "birth": 1036195200000,
+      "gender": "M",
+      "services": "Zumba, Crossfit",
+      "created_at": 1597525430419
     }
   ]
 }
