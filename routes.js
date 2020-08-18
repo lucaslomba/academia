@@ -20,6 +20,13 @@ routes.get('/instructors/:id/edit', instructors.edit)
 
 routes.post('/instructors', instructors.post)
 
+routes.put('/instructors', instructors.put)
+// HTTP VERBS
+// GET : RECEBER
+// POST : CRIAR/SALVAR
+// PUT : ATUALIZAR
+// DELETE : DELETAR
+
 routes.get('/members', function(req, res){
     return res.render("/members")
 })
