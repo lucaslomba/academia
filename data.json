@@ -3,10 +3,10 @@
     {
       "id": 1,
       "avatar_url": "https://source.unsplash.com/collection/3465564/500x500",
-      "name": " Felipe Cassalho",
+      "name": "Felipe Cassalho",
       "birth": 1036195200000,
       "gender": "M",
-      "services": " Zumba, Crossfit ",
+      "services": "   Zumba, Crossfit   ",
       "created_at": 1597525430419
     }
   ]

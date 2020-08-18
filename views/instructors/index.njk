@@ -7,14 +7,14 @@
         <thead>
             <tr>
                 <th>Instructor</th>
-                <th>Atendimento</th>
-                <th>Ação</th>
+                <th>Specialties</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
             {% for instructor in instructors%}
             <tr>
-                <td>{{ instructor.name}}</td>
+                <td><span style="background-image: url({{ instructor.avatar_url}})"> </span> {{ instructor.name}}</td>
                 <td>{{ instructor.services}}</td>
                 <td><a href="/instructors/{{ instructor.id }}"> Ver</a></td>
             </tr>
