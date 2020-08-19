@@ -7,17 +7,21 @@
     <table width="100%">
         <thead>
             <tr>
-                <th>Instructor</th>
-                <th>Specialties</th>
+                <th>Member</th>
+                <th>E-mail</th>
+                <th>Weight</th>
+                <th>Height</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            {% for instructor in instructors%}
+            {% for member in members%}
             <tr>
-                <td><span style="background-image: url({{ instructor.avatar_url}})"> </span> {{ instructor.name}}</td>
-                <td>{{ instructor.services}}</td>
-                <td><a href="/instructors/{{ instructor.id }}"> Ver</a></td>
+                <td><span style="background-image: url({{ member.avatar_url}})"> </span> {{ member.name}}</td>
+                <td>{{ member.email}}</td>
+                <td>{{ member.weight}}kg</td>
+                <td>{{ member.heigth}}cm</td>
+                <td><a href="/members/{{ member.id }}"> Ver</a></td>
             </tr>
             {% endfor%}
         </tbody>
