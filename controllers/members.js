@@ -1,6 +1,6 @@
 const fs = require('fs')
 const data = require('../data.json')
-const { age, date } = require('../utils')
+const { date } = require('../utils')
 
 exports.index = function(req, res){
     
@@ -62,7 +62,7 @@ exports.show = function(req, res){
 
     const member = {
         ...foundmember,
-        age: age(foundmember.birth),
+        birth: date(foundmember.birth).birthDay,
     }
 
     return res.render("members/show", {member})
@@ -82,13 +82,11 @@ exports.edit = function(req, res){
     if(!foundmember){
         return res.send("member not found!")
     }
-
-    console.log(date(foundmember.birth))
     
     //yyyy-mm-dd
     const member = {
         ...foundmember,
-        birth: date(foundmember.birth)
+        birth: date(foundmember.birth).iso
     }
     
     return res.render("members/edit", { member })
